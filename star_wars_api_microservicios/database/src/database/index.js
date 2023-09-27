@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 const { MONGO_URI } = require("../config/envs");
 
 
-// const conn = mongoose.createConnection(MONGO_URI);
-const conn = mongoose.createConnection("mongodb+srv://root:admin@cluster0.grljpx7.mongodb.net/starwars");
+const conn = mongoose.createConnection(MONGO_URI);
 
 // const Character = conn.model("Character", require("./schemas/characterSchema"));
 // const Film = conn.model("Film", require("./schemas/filmSchema"));

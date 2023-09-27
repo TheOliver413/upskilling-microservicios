@@ -1,5 +1,6 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({path:path.resolve(__dirname,"../.env")});
 
 module.exports = {
-    MONGODB: process.env.MONGO_URI,
+    MONGO_URI: process.env.MONGO_URI,
 }
