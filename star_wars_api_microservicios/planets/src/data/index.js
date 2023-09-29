@@ -1,11 +1,13 @@
+const axios = require("axios");
 const planest = require("./planets.json")
 
 module.exports = {
     list: async () => {
-        return planest;
+        const result = await axios.get("http://database:8004/Planet");
+        return result.data;
     },
 
-    create:async() => {
+    create: async () => {
         throw Error("Hay un error al crear una planeta");
     },
 }
